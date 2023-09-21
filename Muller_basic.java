@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Muller 
+public class Muller_basic 
 {
      // Define the function f(x) here
     public static double function(double x) 
