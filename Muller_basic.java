@@ -5,7 +5,8 @@ public class Muller
      // Define the function f(x) here
     public static double function(double x) 
     {
-        return Math.exp(-x * x * x) - x * x * x;
+        double n=Math.pow(x, 3);
+        return Math.exp(-n) - n;
     }
     
     public static double mullerMethod(double p0, double p1, double p2, double TOL, int N0) {
@@ -36,7 +37,6 @@ public class Muller
             {
                 return p;
             }
-
             p0 = p1;
             p1 = p2;
             p2 = p;
