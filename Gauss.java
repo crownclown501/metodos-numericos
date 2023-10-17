@@ -2,7 +2,7 @@ package MetodosNumericos.tarea5;
 import java.util.Arrays;
 
 public class Gauss{
-    public static double[] solveGaussSeidel(int n, double[][] A, double[] b, double[] X0, double TOL, int N) {
+    public static double[] Gauss_Seidel(int n, double[][] A, double[] b, double[] X0, double TOL, int N) {
         //PASO 1
         int k = 1; // Inicializamos el contador de iteraciones a 1
         double[] x = new double[n]; // Inicializamos x con los valores iniciales en X0
@@ -61,7 +61,7 @@ public class Gauss{
         double TOL = 0.001; // Tolerancia
         int N = 5; // Número máximo de iteraciones
         // Llamamos a la función y le damos valores a un arreglo de tamaño no definido
-        double[] x = solveGaussSeidel(n, A, b, X0, TOL, N);
+        double[] x = Gauss_Seidel(n, A, b, X0, TOL, N);
         // Comprobamos si encontramos una solución o si se superó el número máximo de iteraciones:
         if (x != null) {
             System.out.println("Solución aproximada:");
@@ -69,5 +69,7 @@ public class Gauss{
         } else {
             System.out.println("Se superó el número máximo de iteraciones.");
         }
+    }
+}
     }
 }
