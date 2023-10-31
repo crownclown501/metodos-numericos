@@ -29,7 +29,7 @@ public class Gauss{
             }
             k++;
         }
-        return null;
+        return X0;
     }
     //PASO 4
     public static boolean isConverged(double[] x, double[] X0,double TOL) {
@@ -61,15 +61,17 @@ public class Gauss{
         double TOL = 0.001; // Tolerancia
         int N = 5; // Número máximo de iteraciones
         // Llamamos a la función y le damos valores a un arreglo de tamaño no definido
-        double[] x = Gauss_Seidel(n, A, b, X0, TOL, N);
+for (int i=0;i<5;i++)
+{
+ double[] x = Gauss_Seidel(n, A, b, X0, TOL, N);
         // Comprobamos si encontramos una solución o si se superó el número máximo de iteraciones:
         if (x != null) {
             System.out.println("Solución aproximada:");
             System.out.println(Arrays.toString(x));
         } else {
             System.out.println("Se superó el número máximo de iteraciones.");
-        }
     }
 }
-    }
+       
+    
 }
